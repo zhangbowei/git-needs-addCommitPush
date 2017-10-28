@@ -1,0 +1,86 @@
+{
+  "_from": "git-needs-push",
+  "_id": "git-needs-push@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-jqLKIvj3JrOWYbXi4TbyS6FZ7w4=",
+  "_location": "/git-needs-push",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "git-needs-push",
+    "name": "git-needs-push",
+    "escapedName": "git-needs-push",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/git-needs-push/-/git-needs-push-1.0.0.tgz",
+  "_shasum": "8ea2ca22f8f726b39661b5e2e136f24ba159ef0e",
+  "_spec": "git-needs-push",
+  "_where": "/Users/ZhangBowei/.zsh/data",
+  "author": {
+    "name": "Jan Peer Stöcklmair"
+  },
+  "ava": {
+    "require": "babel-register",
+    "babel": "inherit"
+  },
+  "bugs": {
+    "url": "https://github.com/JPeer264/node-git-needs-push/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "current-git-branch": "^1.0.0",
+    "execa": "^0.6.1",
+    "is-git-repository": "^1.1.1",
+    "path-is-absolute": "^1.0.1"
+  },
+  "deprecated": false,
+  "description": "Check synchronously if a git repository needs to push",
+  "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
+    "ava": "^0.19.1",
+    "babel-cli": "^6.24.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.2.2",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "fs-extra": "^3.0.1",
+    "husky": "^0.13.2",
+    "nyc": "^10.1.2"
+  },
+  "homepage": "https://github.com/JPeer264/node-git-needs-push#readme",
+  "keywords": [
+    "is",
+    "git",
+    "repository",
+    "repo",
+    "is-git",
+    "needs",
+    "push"
+  ],
+  "license": "MIT",
+  "main": "build.js",
+  "name": "git-needs-push",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPeer264/node-git-needs-push.git"
+  },
+  "scripts": {
+    "babel": "babel index.js -o build.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "eslint index.js",
+    "prepublish": "npm run babel",
+    "prepush": "npm test",
+    "pretest": "npm run lint",
+    "test": "nyc ava"
+  },
+  "version": "1.0.0"
+}
